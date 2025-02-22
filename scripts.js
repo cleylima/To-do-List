@@ -1,15 +1,19 @@
-function adicionarTarefa(){
-    let valorDoInput = document.querySelector("input").value
+function adicionarTarefa() {
+    const input = document.getElementById('input-tarefa');
+    const valorDoInput = input.value.trim();
 
-    let li = document.createElement("li")
-    li.innerHTML = valorDoInput + '<span onclick = "deletarTarefa(this)">❌</span>'
+    if (!valorDoInput) return;
 
-    document.querySelector("ul").appendChild(li)
-    
-    document.querySelector("input").value = ""
+    const li = document.createElement('li');
+    li.innerHTML = `${valorDoInput} <span onclick="deletarTarefa(this)">❌</span>`;
+
+    const ul = document.getElementById('lista-tarefas');
+    ul.appendChild(li);
+
+    input.value = '';
+    input.focus(); // Foca no campo de input após adicionar a tarefa
 }
 
-function deletarTarefa(li){
-    li.parentElement.remove()
-    
+function deletarTarefa(elemento) {
+    elemento.parentElement.remove();
 }

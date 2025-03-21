@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Lista de Tarefas</title>
+    <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Minha Lista de Tarefas</h1>
-
-        <div class="input-container">
-            <input id="input-tarefa" type="text" placeholder="Digite uma nova tarefa" aria-label="Nova tarefa">
-            <button onclick="adicionarTarefa()">Adicionar</button>
-        </div>
-
-        <hr>
-
-        <ul id="lista-tarefas"></ul>
+        <h1>Lista de Tarefas</h1>
+        <p>Adicione suas tarefas!</p>
+        <input type="text" id="inputTarefa" placeholder="Digite a sua tarefa">
+        <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        <button onclick="limparTarefas()">Limpar Tarefas</button>
+        <p id="mensagem"></p>
+        <ul id="listaTarefas"></ul>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
